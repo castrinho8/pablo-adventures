@@ -79,19 +79,7 @@
       </section>
 
       <section>
-        <h3>2. <em>Things about privacy</em></h3>
-      </section>
-
-      <section>
-        <h3><em>Let's de-Google-ify the Internet</em></h3>
-        <p>Christophe Lafon-Roudier - CM at Framasoft</p>
-        <p>
-          <a target="_blank" href="https://degooglisons-internet.org/?l=en">More info</a>
-        </p>
-      </section>
-
-      <section>
-        <h3><em>Privacy in practice for self hosting</em></h3>
+        <h3>2.<em> Privacy in practice for self hosting</em></h3>
         <p>Mickael Scherer - Red Hat sysadmin</p>
         <p>
           <a target="_blank" href="https://www.mozilla.org/en-US/about/policy/lean-data/?control">More info</a>
@@ -99,24 +87,24 @@
       </section>
 
       <section>
-        <h3>Privacy <em></em></h3>
-        <ul>
-          <li>Selfhosting</li>
-          <li>Try to store lowest information</li>
-          <li>Encriptation</li>
-          <li>.onion services</li>
-          <li>Make sure 3rd parties take privacy</li>
-          <li>2 factor auth</li>
+        <h3><em>Some tips</em></h3>
+        <ul style="text-align: left">
+          <li><h4>Selfhosting</h4></li>
+          <li><h4>Try to store <em>lowest information</em></h4></li>
+          <li><h4>Encriptation</h4></li>
+          <li><h4>.onion services</h4></li>
+          <li><h4>Make sure 3rd parties take privacy</h4></li>
+          <li><h4>2 factor auth</h4></li>
         </ul>
       </section>
 
       <section>
-        <h3>Logs <em>tracing attacker ~= tracing user</em></h3>
-        <ul>
-          <li>Anonymize logs</li>
-          <li>Reduce information logged as possible (user agent? ip? referrer?)</li>
-          <li>Public trail of who read the log</li>
-          <li>Think how much log time you need to store</li>
+        <h3>Logs<br/> <em>tracing attacker ~= tracing user</em></h3>
+        <ul style="text-align: left">
+          <li><h4>Anonymize logs</h4></li>
+          <li><h4>Reduce information logged as possible (user agent? ip? referrer?)</h4></li>
+          <li><h4>Public trail of who read the log</h4></li>
+          <li><h4>Think how much log time you need to store</h4></li>
         </ul>
       </section>
 
@@ -135,6 +123,9 @@
       <section data-background="img/slides/stats2.png" data-background-size="75%">
       </section>
 
+      <section data-background="img/slides/packet0.png" data-background-size="75%">
+      </section>
+
       <section data-background="img/slides/packet1.png" data-background-size="75%">
       </section>
 
@@ -144,20 +135,122 @@
       <section data-background="img/slides/packet3.png" data-background-size="75%">
       </section>
 
-      <section>
-        <h2>3. <em>A-Frame</em></h2>
+      <section data-background="#60c8f2">
+        <img src="img/logos/aframe_logo2.png" width="60%;"/>
       </section>
 
       <section>
-        <h2>Entity-component-system framework (ECS)</h2>
+        <h4>Entity-component-system framework (ECS)</h4>
+        <aside class="notes">
+          Entity = placeholder
+          Component = visual and behaviour
+          three.js
+          HTML
+        </aside>
       </section>
 
       <section>
-        <h2>3. <em>A-Frame</em></h2>
+        <h3><em>Primitives</em></h3>
+        <p><pre>a-box a-cylinder a-plane a-sphere a-sky a-light</pre></p>
+        <br/>
+        <h4><a href="localhost:3000/intro/primitives" target="_blank">Example</a></h4>
+        <aside class="notes">
+          Entities with default behaviour, style and animations
+          rotation in degrees, distance in meters -> because WebVR API
+        </aside>
       </section>
 
       <section>
-        <h2>3. <em>A-Frame</em></h2>
+        <h3><em>Inheritance</em></h3>
+        <ul style="text-align:left;">
+          <li>Properties has 3 dimensions</li>
+          <li>Property inheritance similar to CSS</li>
+          <li>Textures</li>
+        </ul>
+        <br/>
+        <h4><a href="localhost:3000/intro/inheritance" target="_blank">Example</a></h4>
+        <aside class="notes">
+          some properties in 3 dimensions
+          composition of properties (real position of sphere will be 1 2 3) and it will inherit rotation and scale too
+          image texture -> src to a box
+        </aside>
+      </section>
+
+      <section>
+        <h3><em>Assets</em> management</h3>
+        <br/>
+        <ul style="text-align:left;">
+          <li>Basic assets</li>
+          <li>Backgrounds using <em>sky</em> tag</li>
+          <li>Reusable</li>
+          <li>Better performance</li>
+        </ul>
+        <br/>
+        <h4><a href="localhost:3000/intro/assets" target="_blank">Example</a></h4>
+        <aside class="notes">
+          asset with box texture
+          add sky
+          duplicate box
+        </aside>
+      </section>
+
+      <section>
+        <h3><em>Lights</em></h3>
+        <br/>
+        <ul style="text-align:left;">
+          <li>Default: ambient and directional</li>
+        </ul>
+        <br/>
+        <h4><a href="localhost:3000/intro/lights" target="_blank">Example</a></h4>
+        <aside class="notes">
+          remove lights and check what happens
+          play with inspector and directional light
+        </aside>
+      </section>
+
+      <section>
+        <h3>Adding <em>Animation</em></h3>
+        <br/>
+        <ul style="text-align:left;">
+          <li>Animate the position attribute</li>
+          <li>Animate to 0 2.2. -5 which is 20 centimeters higher.</li>
+          <li>Alternate the direction of the animation on each repeated cycle of the animation.</li>
+          <li>Last for 2000 millisecond duration on each cycle.</li>
+          <li>Repeat the animation indefinitely.</li>
+        </ul>
+        <br/>
+        <h4><a href="localhost:3000/intro/animation" target="_blank">Example</a></h4>
+        <h3 class="fragment"><em>Animation </em>may be deprecated</h3>
+        <aside class="notes">
+          cursor emits events like mouseenter, mouseleave as well as click.
+        </aside>
+      </section>
+
+      <section>
+        <h3>Adding <em>Interaction</em></h3>
+        <br/>
+        <ul style="text-align:left;">
+          <li>Add event listeners</li>
+          <li>You can use it with React and save state</li>
+        </ul>
+        <br/>
+        <h4><a href="localhost:3000/intro/interaction" target="_blank">Example</a></h4>
+        <aside class="notes">
+        </aside>
+      </section>
+
+      <section>
+        <h3>Creating a <em>Component</em></h3>
+        <br/>
+        <ul style="text-align:left;">
+          <li>Default <em>schema</em></li>
+          <li>Reusable code</li>
+          <li>Lifecycle handler methods</li>
+        </ul>
+        <br/>
+        <h4><a href="localhost:3000/intro/component" target="_blank">Example</a></h4>
+        <aside class="notes">
+        </aside>
       </section>
 
       <section>
